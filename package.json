@@ -4,7 +4,7 @@
     "displayName": "Agraris Core",
     "description": "Agraris tools core components.",
     "unity": "2020.3",
-    "unityRelease": "11f1",
+    "unityRelease": "1f1",
     "keywords": [
         "utility",
         "tool",
@@ -20,15 +20,15 @@
     },
     "homepage": "https://agraris.github.io/",
     "bugs": {
-        "url": "https://github.com//issues",
-        "email": "agrarisentertainment@gmail.com"
+        "url": "https://github.com/agraris/com.agraris.core/issues"
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/agraris/com.agraris.core.git"
     },
     "license": "MIT",
     "author": {
-        "name": "Agraris Entertainment"
+        "name": "Agraris Entertainment",
+        "email": "agrarisentertainment@gmail.com"
     }
 }
