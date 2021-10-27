@@ -11,8 +11,13 @@
         "unity",
         "singleton",
         "android",
-        "build-pipeline"
+        "build-pipeline",
+        "game-data",
+        "save-data"
     ],
+    "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "2.0.0"
+    },
     "homepage": "https://agraris.github.io/",
     "bugs": {
         "url": "https://github.com//issues",
