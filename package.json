@@ -4,11 +4,14 @@
     "displayName": "Agraris Core",
     "description": "Agraris tools core components.",
     "unity": "2020.3",
+    "unityRelease": "11f1",
     "keywords": [
         "utility",
         "tool",
         "unity",
-        "singleton"
+        "singleton",
+        "android",
+        "build-pipeline"
     ],
     "homepage": "https://agraris.github.io/",
     "bugs": {
