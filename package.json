@@ -1,6 +1,6 @@
 {
     "name": "com.agraris.core",
-    "version": "1.0.0",
+    "version": "1.0.0-alpha.1",
     "displayName": "Agraris Core",
     "description": "Agraris tools core components.",
     "unity": "2020.3",
