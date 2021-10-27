@@ -1,23 +1,26 @@
 using System.Collections;
 using UnityEngine;
 
-public class FloatingMonoBehaviour
+namespace Agraris.Tools.Core
 {
-    class Holder : MonoBehaviour { }
-    static Holder _coroutine;
-    static Holder Coroutine
+    public class FloatingMonoBehaviour
     {
-        get
+        class Holder : MonoBehaviour { }
+        static Holder _coroutine;
+        static Holder Coroutine
         {
-            if (_coroutine == null)
-                return _coroutine = new GameObject("FloatingMonoBehaviour").AddComponent<Holder>();
+            get
+            {
+                if (_coroutine == null)
+                    return _coroutine = new GameObject("FloatingMonoBehaviour").AddComponent<Holder>();
 
-            return _coroutine;
+                return _coroutine;
+            }
         }
-    }
 
-    public static void StartCoroutine(IEnumerator coroutine)
-    {
-        Coroutine.StartCoroutine(coroutine);
+        public static void StartCoroutine(IEnumerator coroutine)
+        {
+            Coroutine.StartCoroutine(coroutine);
+        }
     }
 }
