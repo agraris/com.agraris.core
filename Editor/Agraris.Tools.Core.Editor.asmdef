@@ -1,8 +1,12 @@
 {
-    "name": "Agraris.Tools.Core",
+    "name": "Agraris.Tools.Core.Editor",
     "rootNamespace": "",
-    "references": [],
-    "includePlatforms": [],
+    "references": [
+        "Agraris.Tools.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
     "overrideReferences": false,
