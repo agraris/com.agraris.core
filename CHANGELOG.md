@@ -26,3 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Singleton.cs and PresistentSingleton.cs for instancing
 - FloatingMonoBehaviour.cs for calling Coroutine without attaching the script on gameObject
 - AndroidBuildPipeline.cs helper for Android build
+- SimplePool.cs for object pooling by quill18 and Draugor
+- Versioning.cs for incrementing version and bundleVersionCode (Android) with single click
+- AndroidKeystoreAuthenticatorOSX.cs fill keystore password on build automatically for OSX by Adrian Stutz
+- AndoridKeystoreAuthenticatorWindows.cs fill keystore password on build automatically for Windows
