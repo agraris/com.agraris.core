@@ -2,8 +2,8 @@
     "name": "com.agraris.core",
     "version": "1.0.0-alpha.1",
     "displayName": "Agraris Core",
-    "description": "Agraris tools core components.",
-    "unity": "2020.3",
+    "description": "Agraris tools core components. Intended for internal use.",
+    "unity": "2019.3",
     "unityRelease": "1f1",
     "keywords": [
         "utility",
@@ -18,17 +18,19 @@
     "dependencies": {
         "com.unity.nuget.newtonsoft-json": "2.0.0"
     },
-    "homepage": "https://agraris.github.io/",
-    "bugs": {
-        "url": "https://github.com/agraris/com.agraris.core/issues"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/agraris/com.agraris.core.git"
     },
+    "bugs": {
+        "url": "https://github.com/agraris/com.agraris.core/issues"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    },
     "license": "MIT",
     "author": {
         "name": "Agraris Entertainment",
-        "email": "agrarisentertainment@gmail.com"
+        "url": "https://agraris.github.io/"
     }
 }
