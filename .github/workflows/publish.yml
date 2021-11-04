@@ -22,8 +22,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
-          registry-url: 'https://npm.pkg.github.com'
-          # Defaults to the user or organization that owns the workflow file
-          scope: 'agraris'
-      - run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PAT_GA}}
