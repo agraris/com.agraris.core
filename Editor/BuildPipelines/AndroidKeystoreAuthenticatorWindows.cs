@@ -52,7 +52,6 @@ public class AndroidKeystoreAuthenticatorWindows : IPreprocessBuildWithReport, I
     {
         string output;
         var code = Execute(keyName, "", "-load", out output);
-        Debug.Log("Output " + output + " Code " + code);
         if (code != 0)
         {
             if (string.IsNullOrEmpty(currentPassword))
