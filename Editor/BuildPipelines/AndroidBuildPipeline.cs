@@ -72,7 +72,7 @@ namespace Agraris.Tools.Core
         {
             string defaultFolder = Path.Combine(Directory.GetParent(Application.dataPath).FullName, "Builds");
             // Based on semantic versioning
-            string defaultName = $"{Application.productName} {PlayerSettings.bundleVersion}{(buildType == BuildType.Development ? "-dev" : "")}+{PlayerSettings.Android.bundleVersionCode}";
+            string defaultName = $"{RemoveInvalidChars(Application.productName)} {PlayerSettings.bundleVersion}{(buildType == BuildType.Development ? "-dev" : "")}+{PlayerSettings.Android.bundleVersionCode}";
             string extension = (EditorUserBuildSettings.buildAppBundle ? ".aab" : ".apk");
             return Path.Combine(defaultFolder, defaultName + extension).Replace("\\", "/");
         }
@@ -93,6 +93,16 @@ namespace Agraris.Tools.Core
         public void OnPostprocessBuild(BuildReport report)
         {
             PlayerSettings.Android.targetArchitectures |= AndroidArchitecture.ARMv7 | AndroidArchitecture.ARM64;
+        }
+
+        static string RemoveInvalidChars(string source)
+        {
+            return string.Concat(source.Split(Path.GetInvalidFileNameChars()));
+        }
+
+        static string ReplaceInvalidChars(string source)
+        {
+            return string.Join("_", source.Split(Path.GetInvalidFileNameChars()));
         }
 
         #region MENU
