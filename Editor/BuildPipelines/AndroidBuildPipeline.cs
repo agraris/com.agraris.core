@@ -93,6 +93,7 @@ namespace Agraris.Tools.Core
         public void OnPostprocessBuild(BuildReport report)
         {
             PlayerSettings.Android.targetArchitectures |= AndroidArchitecture.ARMv7 | AndroidArchitecture.ARM64;
+            PlayNotification();
         }
 
         static string RemoveInvalidChars(string source)
@@ -103,6 +104,12 @@ namespace Agraris.Tools.Core
         static string ReplaceInvalidChars(string source)
         {
             return string.Join("_", source.Split(Path.GetInvalidFileNameChars()));
+        }
+
+        static void PlayNotification()
+        {
+            AudioClip notifClip = Resources.Load<AudioClip>("Notification");
+            EditorSFX.PlayClip(notifClip);
         }
 
         #region MENU
